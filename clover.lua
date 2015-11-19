@@ -32,8 +32,6 @@ clover.ByteArray = require "clover.util.ByteArray"
 
 clover.ByteArrayVarint = require "clover.util.ByteArrayVarint"
 
-clover.tasker = require "clover.tasker"
-
 clover.Executors = require "clover.util.Executors"
 
 clover.Tween = require "clover.util.Tween"
