@@ -56,12 +56,20 @@ clover.Application()
 
 ### 定义Command
 Command的执行又dispatcher派发
-形如self.dispatcher:dispatchEvent(clover.Event(Consts.Command.START_UP))
+形如self.dispatcher:dispatchEvent(clover.Event(Consts.Command.START_UP))<br>
+在Application里面<br>
+self.command:add(Consts.Command.START_UP,StartUpCmd)<br>
 Command里面定义execute方法
+定义一个Command类
 ``` lua
-function M:execute(event)
+local StartUpCmd = class()
+function StartUpCmd:ctor() --构造函数
+	--定义任意注入对象
+end 
+function StartUpCmd:execute(event)
 	--do something
 end 
+return StartUpCmd
 ```
 ### 定义View
 @viewClass 视图类<br> 
