@@ -114,8 +114,6 @@ return M
 self.el为传入节点对象<br> 
 self.viewOption为出入参数<br> 
 
-happy coding!!
-
 ### 依赖式注入
 
 当我们需要一个对象的时候，不会去直接new一个对象，而是在注入器里面去
@@ -157,6 +155,7 @@ self.injector:inject(systemServer)
 systemServer便可以获取所有注入到的对象
 
 
+happy coding!!
 
 
 
