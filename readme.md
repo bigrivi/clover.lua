@@ -121,8 +121,8 @@ happy coding!!
 当我们需要一个对象的时候，不会去直接new一个对象，而是在注入器里面去
 createInstance一个对象,注入器会采用属性注入的方式把之前我们mapClass,mapValue注入到系统的所有对象注入进新的对象实例
 比如我们在前面<br>
-self.injector:mapClass("userModel",UserModel,true)
-UserModel模型对象是一个单例
+self.injector:mapClass("userModel",UserModel,true)<br>
+UserModel模型对象是一个单例<br>
 如果我们需要创建的对象需要引用到它，只需要在构造函数里面定义一个userModel即可,eg:
 
 ``` lua
