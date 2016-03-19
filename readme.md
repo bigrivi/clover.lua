@@ -15,7 +15,7 @@ clover.lua 是一个轻量级的Lua MVC框架，致力于创建松耦合，可�
 
 ##最佳实践
 
-- 定义Application
+### 定义Application
 ``` lua
 function clover.Application:start()
 	--server
@@ -45,7 +45,7 @@ clover.Application()
 ```
 在Application的start方法里面做一系列事情，比如注入系统对象，定义一些Command等
 
-- 定义Command
+### 定义Command
 Command的执行又dispatcher派发
 形如self.dispatcher:dispatchEvent(clover.Event(Consts.Command.START_UP))
 Command里面定义execute方法
@@ -54,10 +54,10 @@ function M:execute(event)
 	--do something
 end 
 ```
-- 定义View
-@viewClass 视图类
-@node 显示对象节点，比如cocos2dx里面的cc.Node
-@viewOption 视图相关参数
+### 定义View
+@viewClass 视图类<br> 
+@node 显示对象节点，比如cocos2dx里面的cc.Node<br> 
+@viewOption 视图相关参数<br> 
 Application:createView(viewClass,node,viewOption)
 范例
 ``` lua
@@ -102,8 +102,8 @@ end
 
 return M
 ```
-self.el为传入节点对象
-self.viewOption为出入参数
+self.el为传入节点对象<br> 
+self.viewOption为出入参数<br> 
 
 happy coding!!
 
