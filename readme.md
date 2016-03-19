@@ -149,8 +149,11 @@ return M
 单例可以这样实现 mapClass("userModel",UserModel,true)
 我们还可以显示去注入一个对象
 比如
+
+``` lua
 local systemServer = SystemServer()
 self.injector:inject(systemServer)
+```
 systemServer便可以获取所有注入到的对象
 
 
