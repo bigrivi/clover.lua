@@ -1,5 +1,9 @@
 clover.lua
 =========================
+* 作者：andy.sun
+* 制作日期：2016-03-19
+* Email: sunjiangong@gmail.com
+
 ## 特点
 
 clover.lua 是一个轻量级的Lua MVC框架，致力于创建松耦合，可扩展性的应用程序，
