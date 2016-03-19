@@ -116,5 +116,46 @@ self.viewOption为出入参数<br>
 
 happy coding!!
 
+### 依赖式注入
+
+当我们需要一个对象的时候，不会去直接new一个对象，而是在注入器里面去
+createInstance一个对象,注入器会采用属性注入的方式把之前我们mapClass,mapValue注入到系统的所有对象注入进新的对象实例
+比如我们在前面<br>
+self.injector:mapClass("userModel",UserModel,true)
+UserModel模型对象是一个单例
+如果我们需要创建的对象需要引用到它，只需要在构造函数里面定义一个userModel即可,eg:
+
+``` lua
+function M:ctor()
+	self.userModel = {}
+end 
+
+function M:execute(event)
+	print(self.userModel.uid)
+	print(self.userModel.name)
+end 
+
+return M
+```
+这样能确保不会在对象里面去创建对象，对象和对象之间没有显示的耦合关系
+注入器有如下方法
+- mapClass map一个Class
+- mapValue map一个对象
+- getValue 通过key去获取一个对象
+- createInstance 通过ClassName去创建一个对象实例
+- getValueFromClass 通过key去拿Class的一个实例
+- getInjectedValue 
+
+单例可以这样实现 mapClass("userModel",UserModel,true)
+我们还可以显示去注入一个对象
+比如
+local systemServer = SystemServer()
+self.injector:inject(systemServer)
+systemServer便可以获取所有注入到的对象
+
+
+
+
+
 
 
